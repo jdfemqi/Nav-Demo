@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kIC-s4-kbg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="plm-qf-4ln">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="wEU-9H-Rge"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="1LK-1F-HZH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="F73-Zl-d8n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1003" y="173"/>
+        </scene>
+        <!--Disclosure Detail View Controller-->
+        <scene sceneID="ig6-95-XHL">
+            <objects>
+                <viewController storyboardIdentifier="DisclosureDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zxu-OO-ZCB" customClass="DisclosureDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="orc-1t-sGg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cjs-rJ-g2g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gnQ-Xj-aeU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v53-kX-B4P">
+                                <rect key="frame" x="40" y="40" width="520" height="540"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v53-kX-B4P" firstAttribute="top" secondItem="orc-1t-sGg" secondAttribute="bottom" constant="20" id="Tmb-68-4nl"/>
+                            <constraint firstItem="Cjs-rJ-g2g" firstAttribute="top" secondItem="v53-kX-B4P" secondAttribute="bottom" constant="20" id="XeH-AO-X9H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v53-kX-B4P" secondAttribute="trailing" constant="20" id="pRb-Ja-6iG"/>
+                            <constraint firstItem="v53-kX-B4P" firstAttribute="leading" secondItem="gnQ-Xj-aeU" secondAttribute="leadingMargin" constant="20" id="zSd-8d-RKn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qpF-rq-8gU"/>
+                    <connections>
+                        <outlet property="label" destination="v53-kX-B4P" id="phv-hc-LJA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zvf-dT-2bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301" y="824"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zhU-Hx-oVt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kIC-s4-kbg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cx8-Id-2Uk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dWD-jG-I6D"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BO-FT-qVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="173"/>
+        </scene>
+    </scenes>
+</document>
